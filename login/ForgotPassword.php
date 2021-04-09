@@ -1,10 +1,7 @@
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
- <title>Sign up</title>
+ <title>Forgot Password</title>
 </head>
 <body style="background-image: url('images/brooklyncollege.png'); background-repeat: no-repeat;  background-attachment: fixed;
  background-size: cover;">
@@ -29,7 +26,7 @@
 
    #box{
 
-     background-color: grey;
+     background-color: pink;
      margin: auto;
      width: 300px;
      padding: 20px;
