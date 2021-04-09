@@ -11,6 +11,7 @@ session_start();
     $user_name = $_POST['user_name'];
     $password =  $_POST['password'];
 
+
     if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
     {
         //read from  database
@@ -22,7 +23,8 @@ session_start();
           if($result && mysqli_num_rows($result) > 0)
           {
             $user_data = mysqli_fetch_assoc($result);
-            if($user_data['password'] === $password)
+            $hash =$user_data['password'];
+            if(password_verify($password,$hash))
             {
               $_SESSION['user_id'] = $user_data['user_id'];
               header("Location: home.html");
@@ -71,7 +73,7 @@ session_start();
 
   	#box{
 
-  		background-color: grey;
+  		background-color: pink;
   		margin: auto;
   		width: 300px;
   		padding: 20px;
@@ -83,13 +85,12 @@ session_start();
   </style>
   <div id="box"  >
     <form method ="post">
-      <div style="font-size:20px; margin: 10px; color:white;" >Login</div>
+      <div style="font-size:20px; margin: 10px; color:black;" >Login</div>
 
       <input id="text" type="text" name="user_name" /> <br />
       <input id="text" type="password" name="password" /><br />
-
-      <input id="button" type="submit" value="Login" /><br />
       <a href="ForgotPassword.php">Forgot Password</a> <br />
+      <input id="button" type="submit" value="Login" /><br />
       <a href="signup.php">Click to Sign up</a> <br />
 
     </form>
