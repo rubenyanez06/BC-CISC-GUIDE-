@@ -4,13 +4,22 @@ session_start();
   include("connection.php");
   include("functions.php");
 
-
+$Error = "";
   if($_SERVER['REQUEST_METHOD'] =="POST")
   {
     //sometihng was posted
-    $user_name = $_POST['user_name'];
-    $password =  $_POST['password'];
+    $user_name = trim($_POST['user_name']);
+    if (!preg_match("/^[a-zA-Z0-9]+$/",$user_name))
+    {
+      $Error = "Please enter a valid username";
+    }
+    $user_name = esc($user_name);
+    $password =  esc($_POST['password']);
     $Email = $_POST['Email'];
+    if (!preg_match("/^[\w\-]+@[\w\-]+.[\w\-]+$/",$Email))
+    {
+      $Error = "Please enter a valid Email";
+    }
 
     if (!empty($Email) &&!empty($user_name) && !empty($password) && !is_numeric($user_name))
     {
@@ -24,7 +33,7 @@ session_start();
         // can be stored in the database
         $hash = password_hash($password,
         PASSWORD_DEFAULT);
-
+if ($Error ==""){
         //save to database
         $user_id = random_num(20);
         $query = "insert into users (user_id,user_name,password,Email) values ('$user_id','$user_name','$hash','$Email')";
@@ -33,6 +42,7 @@ session_start();
 
         header("Location: login.php");
         die;
+      }
       }
     }else
     {
@@ -71,7 +81,7 @@ session_start();
 
   	#box{
 
-  		background-color: grey;
+  		background-color: pink;
   		margin: auto;
   		width: 300px;
   		padding: 20px;
@@ -79,11 +89,17 @@ session_start();
   </style>
   <div id="box">
     <form method ="post">
+      <div><?php
+        if (isset($Error)&& $Error != "")
+        {
+          echo $Error;
+        }
+       ?></div>
       <div style="font-size:20px; margin: 10px; color:black;" >Sign up</div>
 
-      <label for="Email"><b>Email</b></label>
+      <label for="Email "><b>Email (must enter vaild email)</b></label>
       <input id="text" type="text" name="Email" /> <br />
-      <label for="user_name"><b>Username</b></label>
+      <label for="user_name "><b>Username (only letters and numbers)</b></label>
       <input id="text" type="text" name="user_name" /> <br />
       <label for="psw"><b>Password</b></label>
       <input id="text" type="password" name="password" /><br />
