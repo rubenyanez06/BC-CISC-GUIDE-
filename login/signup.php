@@ -81,34 +81,50 @@ if ($Error ==""){
 
   	#box{
 
-  		background-color: pink;
+      background-color: white;
   		margin: auto;
   		width: 300px;
   		padding: 20px;
+      margin: 10px;
+      height: 425px;
+      width: 300px;
+      border-radius: 25px;
+      border-radius: 2px solid #f3efef;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: rgb(7, 7, 7);
+      background-image: linear-gradient(to right, #faeaea 0%, #bbe2e2 100%);
+      transition: 0.3s ease-in;
+
   	}
   </style>
-  <div id="box">
-    <form method ="post">
-      <div><?php
-        if (isset($Error)&& $Error != "")
-        {
-          echo $Error;
-        }
-       ?></div>
-      <div style="font-size:20px; margin: 10px; color:black;" >Sign up</div>
+  <center>
+    <div id="box">
+      <form method ="post">
+        <div><?php
+          if (isset($Error)&& $Error != "")
+          {
+            echo $Error;
+          }
+         ?></div>
+        <div style="font-size:20px; margin: 10px; color:black;" >Sign up</div>
 
-      <label for="Email "><b>Email (must enter vaild email)</b></label>
-      <input id="text" type="text" name="Email" /> <br />
-      <label for="user_name "><b>Username (only letters and numbers)</b></label>
-      <input id="text" type="text" name="user_name" /> <br />
-      <label for="psw"><b>Password</b></label>
-      <input id="text" type="password" name="password" /><br />
-       <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input id="text" type="password" name="passwordrepeat" /><br />
+        <label for="Email "><b>Email (must enter vaild email)</b></label>
+        <input id="text" type="text" name="Email" /> <br />
+        <label for="user_name "><b>Username (only letters and numbers)</b></label>
+        <input id="text" type="text" name="user_name" /> <br />
+        <label for="psw"><b>Password</b></label>
+        <input id="text" type="password" name="password" /><br />
+         <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input id="text" type="password" name="passwordrepeat" /><br />
 
-      <input id="button" type="submit" value="Sign up" /><br />
+        <input id="button" type="submit" value="Sign up" /><br />
 
-      <a href="login.php">Click to Login</a> <br />
+        <a href="login.php">Click to Login</a> <br />
+
+  </center>
+
 
     </form>
 
