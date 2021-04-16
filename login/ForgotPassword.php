@@ -26,23 +26,37 @@
 
    #box{
 
-     background-color: pink;
+     background-color: white;
      margin: auto;
      width: 300px;
      padding: 20px;
+     margin: 10px;
+     height: 425px;
+     width: 300px;
+     border-radius: 25px;
+     border-radius: 2px solid #f3efef;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     color: rgb(7, 7, 7);
+     background-image: linear-gradient(to right, #faeaea 0%, #bbe2e2 100%);
+     transition: 0.3s ease-in;
    }
  </style>
- <div id="box">
-   <form method ="post">
-     <div style="font-size:20px; margin: 10px; color:black;" >Forgot Password</div>
+ <center>
+   <div id="box">
+     <form method ="post">
+       <div style="font-size:20px; margin: 10px; color:black;" >Forgot Password</div>
 
-     <label for="Email"><b>Email</b></label>
-     <input id="text" type="text" name="Email" /> <br />
-     <label for="user_name"><b>Username</b></label>
-     <input id="text" type="text" name="user_name" /> <br />
+       <label for="Email"><b>Email</b></label>
+       <input id="text" type="text" name="Email" /> <br />
+       <label for="user_name"><b>Username</b></label>
+       <input id="text" type="text" name="user_name" /> <br />
 
-     <input id="button" type="submit"  value="Send Email" /><br />
-       <a href="login.php">Click to go back to Login</a> <br />
+       <input id="button" type="submit"  value="Send Email" /><br />
+         <a href="login.php">Click to go back to Login</a> <br />
+ </center>
+
 
 
    </form>
