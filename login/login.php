@@ -36,7 +36,7 @@ session_start();
           echo "Wrong username or password";
     }else
     {
-      echo "Please enter some valid information!";
+      //echo "Please enter some valid information!";
     }
 
 
@@ -47,12 +47,21 @@ session_start();
  <html>
 <head>
   <title>Login</title>
+  <center>
+    <h1>
+      Brooklyn College CISC Guide
+    </h1>
+  </center>
 </head>
 <body style="background-image: url('images/brooklyncollege.png'); background-repeat: no-repeat;  background-attachment: fixed;
   background-size: cover;" >
 
 
   <style type="text/css">
+  h1 {
+  color: blue;
+}
+
   #text{
 
   		height: 25px;
@@ -67,31 +76,46 @@ session_start();
   		padding: 10px;
   		width: 100px;
   		color: white;
-  		background-color: lightblue;
+  		background-color: blue;
   		border: none;
   	}
 
   	#box{
 
-  		background-color: pink;
+  		background-color: white;
   		margin: auto;
   		width: 300px;
   		padding: 20px;
+      margin: 10px;
+      height: 425px;
+      width: 300px;
+      border-radius: 25px;
+      border-radius: 2px solid #f3efef;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: rgb(7, 7, 7);
+      background-image: linear-gradient(to right, #faeaea 0%, #bbe2e2 100%);
+      transition: 0.3s ease-in;
 
 
   	}
 
 
   </style>
-  <div id="box"  >
-    <form method ="post">
-      <div style="font-size:20px; margin: 10px; color:black;" >Login</div>
+  <center>
+    <div id="box"  >
+      <form method ="post">
+        <div style="font-size:20px; margin: 10px; color:black;" >Login</div>
+        <label for="user_name "><b>Username</b></label>
+        <input id="text" type="text" name="user_name" /> <br />
+        <label for="psw"><b>Password</b></label>
+        <input id="text" type="password" name="password" /><br />
+        <input id="button" type="submit" value="Login" /><br />
+        <a href="signup.php" >Click to Sign up</a> <br />
+        <a href="ForgotPassword.php">Forgot Password</a> <br />
 
-      <input id="text" type="text" name="user_name" /> <br />
-      <input id="text" type="password" name="password" /><br />
-      <a href="ForgotPassword.php">Forgot Password</a> <br />
-      <input id="button" type="submit" value="Login" /><br />
-      <a href="signup.php">Click to Sign up</a> <br />
+  </center>
 
     </form>
 
