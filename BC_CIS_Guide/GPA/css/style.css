@@ -1,21 +1,24 @@
 body { font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; }
 
-h1 { text-align: center; color: white; margin-left:30px;font-family: Montserrat;}
+h1 { text-align: center; color: white; margin-left:30px;font-family: Century Gothic;}
 
 table.center { margin-left:auto;
                margin-right:auto;}
 
 td { font-weight: bold;
-     background-color: #b1ecf2;
+     background: #2980B9;  /* fallback for old browsers /
+background: -webkit-linear-gradient(to right, #FFFFFF, rgb(177, 234, 255), #2980B9);  / Chrome 10-25, Safari 5.1-6 /
+background-color: #b5d6ff;
+background-image:#5ca0f2 0%; / W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
      border: 2px solid grey;
      border-collapse: collapse;
-     padding: 5px; }
+     padding: 12px; border-radius: 2px;font-family: Century Gothic;
+     color: white;}
 
-.btnNormal { background-color:ghostwhite; color:;}
+.btnNormal { background-color: white; color:;border-radius: 12px;font-family: Century Gothic;}
 
-.btnReset { background-color:red; color:white;}
+.btnReset { background-color:rgb(243, 94, 94); color:white;border-radius: 12px;font-family: Century Gothic;}
 
-.btnCalc { background-color:blue; color:white;border-radius: 8px;}
-
-#instructions { border: 3px double white; width:900px; background-color:#D6F3F0; margin-left:80px;
-                font-family: Trebuchet MS;}
+.btnCalc { background-color:rgb(86, 117, 255); color:white;border-radius: 12px;font-family: Century Gothic;}
