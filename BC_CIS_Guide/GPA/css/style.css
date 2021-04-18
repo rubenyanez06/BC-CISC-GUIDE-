@@ -1,0 +1,21 @@
+body { font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; }
+
+h1 { text-align: center; color: white; margin-left:30px;font-family: Montserrat;}
+
+table.center { margin-left:auto;
+               margin-right:auto;}
+
+td { font-weight: bold;
+     background-color: #b1ecf2;
+     border: 2px solid grey;
+     border-collapse: collapse;
+     padding: 5px; }
+
+.btnNormal { background-color:ghostwhite; color:;}
+
+.btnReset { background-color:red; color:white;}
+
+.btnCalc { background-color:blue; color:white;border-radius: 8px;}
+
+#instructions { border: 3px double white; width:900px; background-color:#D6F3F0; margin-left:80px;
+                font-family: Trebuchet MS;}
