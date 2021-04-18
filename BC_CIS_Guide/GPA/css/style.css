@@ -22,3 +22,11 @@ background-image:#5ca0f2 0%; / W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera
 .btnReset { background-color:rgb(243, 94, 94); color:white;border-radius: 12px;font-family: Century Gothic;}
 
 .btnCalc { background-color:rgb(86, 117, 255); color:white;border-radius: 12px;font-family: Century Gothic;}
+
+#instructions { border: 3px double grey; width:850px; background-color: #b5d6ff;
+background-color: #b5d6ff 0%;
+background-image: #b5d6ff;
+text-align: center;
+color: white;
+ margin-left:80px;
+font-family: Century Gothic;border-radius: 12px;}
