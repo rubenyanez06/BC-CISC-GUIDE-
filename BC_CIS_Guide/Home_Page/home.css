@@ -87,15 +87,16 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #0a0a0a;
-    background: -webkit-linear-gradient(to right, #a58565, #a16b6b, #cec3d4);
-    background: linear-gradient(to right, #927456, #965b5b, #d4cada);
+    
+    background: -webkit-linear-gradient(315deg, #20bf55 10%, #01baef 90%);
+    background-color: #20bf55;
+    background-image: linear-gradient (315deg, #20bf55 10%, #01baef 90%);
     color: rgb(245, 231, 231);
     transition: all 0.3s ease;
   }
 
   .navbar__links:hover {
-    color: #9d37e6;
+    color: #fc24fc;
     transition: all 0.3s ease;
   }
 
@@ -108,7 +109,6 @@
       width: 100%;
       max-width: 1300px;
       padding: 0;
-      
     }
 
     .navbar__menu {
@@ -142,7 +142,7 @@
       height: 3px;
       margin: 5px auto;
       transition: all 0.3s ease-in-out;
-      background: #fff;
+      background: rgb(15, 15, 15);
     }
 
     .navbar__item {
@@ -175,7 +175,6 @@
       top: 20%;
       right: 5%;
       transform: translate(5%, 20%);
-
     }
 
     .navbar__toggle .bar {
@@ -339,36 +338,40 @@
   }
 
   .main h1 {
-    background-color: #ff8177;
-    background-image: linear-gradient(to right, #ff0844 0%, #f7673c 100%);
+    background-color: #20bf55;
+    background-image: linear-gradient (to right, #20bf55 10%, #01baef 90%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     margin-bottom: 5rem;
-    font-size: 2.5rem;
+    font-size: 300%;
   }
   .main h2 {
-    background-color: #ff8177;
-    background-image: linear-gradient(to right, #ff0844 0%, #f7673c 100%);
+    background-color: #20bf55;
+    background-image: linear-gradient (315deg, #20bf55 10%, #01baef 90%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     margin-bottom: 4rem;
-    font-size: 2rem;
+    font-size: 250%;
     font-family: Arial, "sans-serif";
   }
-  .main p {
-      text-align: center;
-      font-size: 1rem;
-      font-family: Arial, "sans-serif";
+  .paragraph {
+    background-image: linear-gradient(to right, #FFFF 0%, #8cffff 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 0%;
+    font-size: 200%;
   }
   .main h3 {
-    background-color: #ff8177;
-    background-image: linear-gradient(to right, #ff0844 0%, #f7673c 100%);
+    background-color: #20bf55;
+    background-image: linear-gradient (315deg, #20bf55 10%, #01baef 90%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -376,15 +379,10 @@
     -moz-text-fill-color: transparent;
     margin-bottom: 5rem;
     margin-top: 2rem;
-    font-size: 2rem;
+    font-size: 250%;
 
   }
-  .main p.h3 {
-    text-align: center;
-    font-size: 1rem;
-    margin-top: 2rem;
-    display: flex;
-  }
+  
   .main_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -396,38 +394,39 @@
     height: 425px;
     width: 300px;
     border-radius: 25px;
-    border-radius: 2px solid #f3efef;
+    border-radius: 2px solid #837272;
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: rgb(7, 7, 7);
-    background-image: linear-gradient(to right, #faeaea 0%, #bbe2e2 100%);
+    background-image: linear-gradient(
+      #a6ffcb,
+      #12d8fa,
+      #1fa2ff
+    );
     transition: 0.3s ease-in;
   }
 
   .main_card:nth-child(2) {
     background: #e9ecee; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #f3f7f5,
-      #f8f8f8,
-      #f7f8f8
+    background-image: linear-gradient(
+      #a6ffcb,
+      #12d8fa,
+      #1fa2ff
     ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #f3f7f5,
-      #f8f8f8,
-      #f7f8f8
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: linear-gradient(
+      #a6ffcb,
+      #12d8fa,
+      #1fa2ff
+    );
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
   .main_card:nth-child(3) {
     background-image: linear-gradient(
-      -225deg,
-      #f4f2f8 0%,
-      #f3f7f5 29%,
-      #f8f8f8 67%,
-      #f7f8f8 100%
+      #a6ffcb,
+      #12d8fa,
+      #1fa2ff
     );
   }
 
@@ -481,7 +480,7 @@
     }
   }
 
-  /* Services Section */
+  /* major/resources Section */
   .services {
     background: #f1f1f1;
     display: flex;
@@ -494,7 +493,11 @@
 
   .services h1 {
     background-color: #ff8177;
-    background-image: linear-gradient(to right, #ff0844 0%, #f7673c 100%);
+    background-image: linear-gradient(
+        #a6ffcb,
+        #12d8fa,
+        #1fa2ff
+      );
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -518,9 +521,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #fff;
-    background-image: linear-gradient(to right, #00dbde 50%,   #1fa2ff 50%);
+    color: rgb(240, 245, 245);
+    background-image: linear-gradient(
+        #a6ffcb,
+        #12d8fa,
+        #1fa2ff
+      );
     transition: 0.3s ease-in;
+
   }
 
   .services__card:nth-child(2) {
@@ -531,12 +539,12 @@
       #12d8fa,
       #1fa2ff
     ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
+    background-image: linear-gradient(
       #a6ffcb,
       #12d8fa,
       #1fa2ff
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    );
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
   .services__card:nth-child(3) {
@@ -564,12 +572,12 @@
   }
 
   .services__card button {
-    color: #fff;
+    color: rgb(243, 236, 236);
     padding: 14px 24px;
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #131313;
+    background: #fcf4f4;
     font-size: 1rem;
   }
 
